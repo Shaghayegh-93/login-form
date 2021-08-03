@@ -1,0 +1,202 @@
+:root {
+    /* --primaryColor: #6d28d9; */
+    --secondaryColor: #ede9fe;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #7c7c7c;
+    --bodyColor:#f2f2f2;
+    --firstgradiantcolor:#a445b2;
+    --secondgradiantcolor:#fa4299;
+    --focusbordercolor:#fc83bb;
+    --bordercolor:lightgrey;
+    --linkcolor:#fa4299;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+    --bodyColor: #f2f2f2;
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    text-decoration: none;
+}
+
+body,html{
+    background: linear-gradient(to left,var(--firstgradiantcolor),var(--secondgradiantcolor)) ;
+   
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    /* background-color: var(--bodyColor); */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* transform: translate(50%,50%); */
+    /* top: -50px; */
+    /* left: -50px; */
+
+}
+
+.wrapper{
+    max-height: 500px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+    background: var(--mainWhite);
+    padding: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* margin: auto; */
+    /* flex-direction: column; */
+    /* height: 100%; */
+    /* width: 100%; */
+
+
+}
+
+
+.wrapper .title-text{
+    display: flex;
+    width: 200%;
+}
+
+.wrapper .title{
+    width: 50%;
+    font-weight: 600;
+    font-size: 35px;
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.form-container{
+    width: 100%;
+    overflow: hidden;
+}
+
+.wrapper .slide-controls{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin: 30px 0 10px 0;
+    border-radius: 5px;
+    border: 1px solid var(--bordercolor);
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+   
+}
+
+.slide-controls .slide{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    line-height: 48px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1 ;
+    color: var(--mainWhite);
+    transition: all 0.5s ease;
+}
+.slide-controls .signup{
+    color: var(--mainBlack);
+}
+.slide-controls .slide-tab{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: 5px;
+     background: linear-gradient(to left,var(--firstgradiantcolor),var(--secondgradiantcolor) 
+    );
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.form-container .form-inner {
+    display: flex;
+    width: 200%;
+
+}
+
+.form-inner form{
+    width: 50%;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-inner form .field{
+
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+.form-inner form .field input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    font-size: 17px;
+    border: 1px solid var(--bordercolor);
+    border-radius: 5px;
+    border-bottom-width:2px ;
+    transition: all 0.4s ease;
+}
+
+.field input:focus{
+    border-color:var(--focusbordercolor) ;
+}
+
+.form-inner form .pass-link{
+    margin-top: 12px    ;
+}
+
+.form-inner form .signup-link{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form-inner form .pass-link a,
+.form-inner form .signup-link a{
+    color: var(--linkcolor);
+
+}
+
+.pass-link a:hover,
+.signup-link a:hover{
+    text-decoration: underline;
+}
+
+.field input[type="submit"]{
+    background: linear-gradient(to left,var(--firstgradiantcolor),var(--secondgradiantcolor)
+    );
+    color: var(--mainWhite);
+    font-weight: 500;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    padding-left: 0;
+}
+input[type="radio"]{
+    display: none;
+}
+
+#signup:checked ~ .slide-tab{
+    left: 50%;
+}
+
+#signup:checked ~ .signup{
+    color: var(--mainWhite);
+}
+#signup:checked ~ .login{
+    color: var(--mainBlack);
+}
+
+
+
