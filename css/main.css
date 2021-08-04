@@ -1,6 +1,6 @@
 :root {
     /* --primaryColor: #6d28d9; */
-    --secondaryColor: #ede9fe;
+    /* --secondaryColor: #ede9fe; */
     --mainWhite: #fff;
     --mainBlack: #222;
     --mainGrey: #7c7c7c;
@@ -11,8 +11,9 @@
     --bordercolor:lightgrey;
     --linkcolor:#fa4299;
     --mainSpacing: 0.1rem;
-    --mainTransition: all 0.3s linear;
-    --bodyColor: #f2f2f2;
+    --mainTransition:  all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* --bodyColor: #f2f2f2; */
+    --bgcolor: linear-gradient(to left,var(--firstgradiantcolor),var(--secondgradiantcolor)) ;
   }
 
   *{
@@ -24,7 +25,7 @@
 }
 
 body,html{
-    background: linear-gradient(to left,var(--firstgradiantcolor),var(--secondgradiantcolor)) ;
+    background: var(--bgcolor);
    
     display: grid;
     height: 100%;
@@ -62,6 +63,7 @@ body,html{
 .wrapper .title-text{
     display: flex;
     width: 200%;
+    text-transform: capitalize;
 }
 
 .wrapper .title{
@@ -69,7 +71,7 @@ body,html{
     font-weight: 600;
     font-size: 35px;
     text-align: center;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: var(--mainTransition);
 }
 
 
@@ -113,9 +115,8 @@ body,html{
     left: 0;
     z-index: 0;
     border-radius: 5px;
-     background: linear-gradient(to left,var(--firstgradiantcolor),var(--secondgradiantcolor) 
-    );
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+     background: var(--bgcolor);
+    transition: var(--mainTransition);
 }
 .form-container .form-inner {
     display: flex;
@@ -125,7 +126,7 @@ body,html{
 
 .form-inner form{
     width: 50%;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: var(--mainTransition);
 }
 
 .form-inner form .field{
@@ -148,8 +149,9 @@ body,html{
     transition: all 0.4s ease;
 }
 
-.field input:focus{
+.form-inner form .field input:focus{
     border-color:var(--focusbordercolor) ;
+    /* border-color: #a445b2; */
 }
 
 .form-inner form .pass-link{
@@ -173,8 +175,7 @@ body,html{
 }
 
 .field input[type="submit"]{
-    background: linear-gradient(to left,var(--firstgradiantcolor),var(--secondgradiantcolor)
-    );
+    background: var(--bgcolor);
     color: var(--mainWhite);
     font-weight: 500;
     font-size: 20px;
