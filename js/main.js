@@ -10,14 +10,12 @@ const loginText=document.querySelector(".title-text .login");
 
 signupBtn.addEventListener("click",()=>{
     loginForm.style.marginLeft="-50%";
-    // signupText.style.marginLeft="-50%";
     loginText.style.marginLeft="-50%"
 
 })
 loginBtn.addEventListener("click",()=>{
     loginForm.style.marginLeft="0%";
     loginText.style.marginLeft="0%"
-    // signupText.style.marginLeft="-50%";
 
 
 })
